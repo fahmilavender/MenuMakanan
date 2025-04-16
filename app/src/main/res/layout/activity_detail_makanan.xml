@@ -1,47 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".DetailMakanan">
 
-    <TextView
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="10dp"
-        android:text="Nama Makanan"
-        android:textSize="20sp"
-        android:fontFamily="@font/poppinssemibold"
-        android:textStyle="bold"
-        android:id="@+id/tvNamaMakananDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <TextView
-        android:layout_marginStart="10dp"
-        android:text="Deskripsi Makanan"
-        android:textSize="16sp"
-        android:fontFamily="@font/poppinsmedium"
-        android:id="@+id/tvDeskripsiMakananDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <!-- Gambar Makanan -->
+        <ImageView
+            android:id="@+id/gambarMakananDetail"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp"
+            />
 
-    <TextView
-        android:layout_marginStart="10dp"
-        android:text="Harga Makanan"
-        android:textSize="15sp"
-        android:fontFamily="@font/poppinsregular"
-        android:id="@+id/tvHargaMakananDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <!-- Nama Makanan -->
+        <TextView
+            android:id="@+id/tvNamaMakananDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Makanan"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppinssemibold"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
 
-    <ImageView
-        android:id="@+id/gambarMakananDetail"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"
-        android:layout_marginTop="11dp"
-        android:layout_marginStart="10dp" />
-</LinearLayout>
+        <!-- Deskripsi -->
+        <TextView
+            android:id="@+id/tvDeskripsiMakananDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi Makanan"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppinsmedium"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Harga -->
+        <TextView
+            android:id="@+id/tvHargaMakananDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harga Makanan"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Asal -->
+        <TextView
+            android:id="@+id/tvAsalMakananDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asal Makanan"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Tombol Bayar & Akai -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnBayar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Bayar"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnAkai"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Batal"
+                android:backgroundTint="#F44336"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
